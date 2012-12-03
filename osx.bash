@@ -18,8 +18,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Menu bar: hide the useless Time Machine and Volume icons
 #defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
-# altered fir desktop
-defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
+# altered for desktop
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Disable smooth scrolling
 # (Uncomment if you’re on an older Mac that messes up the animation)
@@ -168,7 +168,7 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 
 
 # Finder: show hidden files by default
-defaults write com.apple.Finder AppleShowAllFiles -bool true
+#defaults write com.apple.Finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -259,8 +259,9 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Remove the auto-hiding Dock delay
 defaults write com.apple.Dock autohide-delay -float 0
+
 # Remove the animation when hiding/showing the Dock
-#defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.1
 
 # Enable the 2D Dock
 #defaults write com.apple.dock no-glass -bool true
@@ -289,9 +290,9 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom left screen corner → Start screen saver
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
- # Bottom right screen corner → Start screen sleep
-defaults write com.apple.dock wvous-br-corner -int 7
- defaults write com.apple.dock wvous-br-modifier -int 0
+# Bottom right screen corner → Start screen sleep
+defaults write com.apple.dock wvous-br-corner -int 10
+	defaults write com.apple.dock wvous-br-modifier -int 0
 
 ###############################################################################
 # Safari & WebKit                                                             #
