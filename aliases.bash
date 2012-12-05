@@ -12,6 +12,11 @@ alias g='git'
 alias gs='git status -sb'
 alias gp='git push'
 alias gl='git pull'
+
+## git push / pull master
+alias gpm='git push origin master'
+alias glm='git pull origin master'
+
 alias gca='git commit -v -a'
 alias gco='git checkout'
 # Lovely git log, thx @visionmedia
